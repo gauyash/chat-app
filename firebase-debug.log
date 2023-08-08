@@ -1,0 +1,69 @@
+[debug] [2023-08-07T09:53:33.247Z] ----------------------------------------------------------------------
+[debug] [2023-08-07T09:53:33.250Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\GAUTAM\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-08-07T09:53:33.251Z] CLI Version:   12.4.7
+[debug] [2023-08-07T09:53:33.251Z] Platform:      win32
+[debug] [2023-08-07T09:53:33.251Z] Node Version:  v18.16.0
+[debug] [2023-08-07T09:53:33.252Z] Time:          Mon Aug 07 2023 15:23:33 GMT+0530 (India Standard Time)
+[debug] [2023-08-07T09:53:33.252Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-08-07T09:53:33.257Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-08-07T09:53:33.320Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-08-07T09:53:33.323Z] > authorizing via signed-in user (gau.yash05@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\GAUTAM\Desktop\Coding\React\chat-app
+
+[debug] [2023-08-07T09:53:36.605Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-08-07T09:53:36.606Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-08-07T09:55:01.878Z] > refreshing access token with scopes: []
+[debug] [2023-08-07T09:55:01.879Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-08-07T09:55:01.879Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-08-07T09:55:02.536Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-08-07T09:55:02.536Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-08-07T09:55:02.550Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2023-08-07T09:55:03.881Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2023-08-07T09:55:03.882Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project chat-web-app-f2046 (chat-web-app) 
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2023-08-07T09:56:15.603Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/chat-web-app-f2046/services/firebasedatabase.googleapis.com [none]
+[debug] [2023-08-07T09:56:15.603Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/chat-web-app-f2046/services/firebasedatabase.googleapis.com x-goog-quota-user=projects/chat-web-app-f2046
+[debug] [2023-08-07T09:56:17.803Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/chat-web-app-f2046/services/firebasedatabase.googleapis.com 200
+[debug] [2023-08-07T09:56:17.803Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/chat-web-app-f2046/services/firebasedatabase.googleapis.com [omitted]
+[info] +  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2023-08-07T09:56:17.805Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/chat-web-app-f2046/locations/-/instances/chat-web-app-f2046-default-rtdb [none]
+[debug] [2023-08-07T09:56:20.072Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/chat-web-app-f2046/locations/-/instances/chat-web-app-f2046-default-rtdb 200
+[debug] [2023-08-07T09:56:20.073Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/chat-web-app-f2046/locations/-/instances/chat-web-app-f2046-default-rtdb {"name":"projects/63696965673/locations/us-central1/instances/chat-web-app-f2046-default-rtdb","project":"projects/63696965673","databaseUrl":"https://chat-web-app-f2046-default-rtdb.firebaseio.com","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[info] 
+[info] Firebase Realtime Database Security Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 
+[debug] [2023-08-07T09:56:31.692Z] >>> [apiv2][query] GET https://chat-web-app-f2046-default-rtdb.firebaseio.com/.settings/rules.json [none]
+[debug] [2023-08-07T09:56:33.171Z] <<< [apiv2][status] GET https://chat-web-app-f2046-default-rtdb.firebaseio.com/.settings/rules.json 200
+[debug] [2023-08-07T09:56:33.171Z] <<< [apiv2][body] GET https://chat-web-app-f2046-default-rtdb.firebaseio.com/.settings/rules.json [stream]
+[info] +  Database Rules for chat-web-app-f2046-default-rtdb have been written to database.rules.json. 
+[info] Future modifications to database.rules.json will update Realtime Database Security Rules when you run
+[info] firebase deploy.
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
