@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import {auth,provider,database} from '../misc/firebase'
 import { signInWithPopup } from "firebase/auth";
-import {set, ref } from "firebase/database";
+import {set, ref,serverTimestamp } from "firebase/database";
 
 
 const SignIn = () => {
@@ -9,16 +9,15 @@ const SignIn = () => {
 
   async function handleSignIn() {
     try {
-      const result = await signInWithPopup(auth, provider); // Use await to get the result
+      const result = await signInWithPopup(auth, provider); 
       const signedInUser = result;
       setUser(signedInUser.user.email);
       console.log(signedInUser);
 
-      if (signedInUser.additionalUserInfo?.isNewUser) {
-        // Use ref and set to write data to the database
+      if (signedInUser._tokenResponse.isNewUser) {
         set(ref(database, `/profiles/${signedInUser._tokenResponse.localId}`), {
           name: signedInUser._tokenResponse.displayName,
-          createdAt: database.ServerValue.TIMESTAMP
+          createdAt: serverTimestamp()
         });
       }
     } catch (error) {
